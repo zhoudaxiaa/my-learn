@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../jquery-3.0.0.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var a=$(".p2").clone();
+//        alert(1);
+        var b= $(".p1").replaceWith(a);
+//        alert(2);
+        $(".p2").replaceWith(b);
+//        var  a=$(".p1").text();
+//        alert(b.text());
+//        $("div :nth-child(2)").css("color","red");
+//        $(".p1").toggleClass("p1");
+//       var $a= $(".p1").html("23");
+//        alert($a);
+//        $("button").click(function () {
+////            var c=$("input").val();
+////            alert(c);
+//            if($(".img").js(":hidden")){ $(".img").slideDown(1000);}
+//            else{ $(".img").slideUp(1000);}
+//
+//        });
+
+//            $(".img1").slideToggle("slow",function(){
+//                $(".img2").slideDown(1000);
+//            });
+        $(".img1").toggle(1000);
+
+        $(":text").focus(function () {
+            $(this).val("");
+        });
+    });
+</script>
+<style type="text/css">
+    .p1{color: red;}
+    .p2{color: blue;}
+    .img2{display: none;}
+</style>
+</head>
+<body>
+<div>
+    <p class="p1">1</p></div>
+    <p class="p2">2</p>
+<div>
+    <input placeholder="nihao" type="text"/>
+    <button>确认</button>
+</div>
+
+<div >
+    <img class="img1" src="http://img11.360buyimg.com/da/jfs/t2761/138/3170520517/131019/5f72d99f/57832fa7N8a577b8a.jpg"/>
+    <img class="img2" src="http://img20.360buyimg.com/da/jfs/t2650/65/3177770327/114997/766b6a46/578462a3N1fced3b9.jpg"/>
+</div>
+
+</body>
+</html>

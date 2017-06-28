@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css"/>
+    <link rel="stylesheet" href="css/reset.css" type="text/css"/>
+    <script type="text/javascript" src="../jquery-3.0.0.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+<!--headBar开始-->
+<div class="headerBar">
+    <div class="login_width">
+        <div class="login fl">
+            <a href="">
+                <img src="images/logo.jpg" alt="来又来网"/>
+            </a>
+        </div>
+
+        <h2 class="welcome fl">欢迎登录</h2>
+    </div>
+</div>
+<!--headBar结束-->
+
+<!--login_box开始-->
+<div class="loginBbox">
+    <div class="login_cont">
+        <form action="post" method="">
+            <ul>
+                <li class="login_mess"></li>
+                <li class="login_tit">
+                    邮箱/用户名/手机号
+                </li>
+                <li>
+                    <input id="login_name" class="login_input" onkeyup="" type="text"/>
+                </li>
+                <li class="login_tit">
+                            密码：
+                </li>
+                <li>
+                    <input id="login_password" class="login_input" onkeyup="chekLogin()" type="password"/>
+                </li>
+                <li class="login_tit">
+                        <span class="login_verify fl">
+                            验证码：
+                        </span>
+                    <input class="verify" type="text"/>
+                    <span></span>
+                </li>
+                <li class="login_auto">
+                    <input id="t1" class="login_checkbox" type="checkbox"/>
+                    <label for="t1">自动登录</label>
+                </li>
+                <li class="login_tit">
+                    <input class="login_btn" onclick="" type="submit" value=""/>
+                </li>
+            </ul>
+            <div class="login_other">
+                <p>使用合作方账号登陆网站</p>
+                <p>
+                    <a href="">QQ</a>
+                    <i>|</i>
+                    <a href="">网易</a>
+                    <i>|</i>
+                    <a href="">新浪微博</a>
+                    <i>|</i>
+                    <a href="">腾讯微博</a>
+                    <i>|</i>
+                    <a href="">微信</a>
+                    <i>|</i>
+                    <a href="">支付宝</a>
+                </p>
+            </div>
+
+        </form>
+
+    </div>
+    <a class="login_reg" href="">
+        <img src="images/icon/red_link.jpg" alt="注册"/>
+    </a>
+
+</div>
+<!--login_box结束-->
+
+<!--footer开始-->
+<div class="footer">
+    <p>
+        <a href="">来网简介</a>
+        <i>|</i>
+        <a href="">来网公告</a>
+        <i>|</i>
+        <a href="">朝那贤士</a>
+        <i>|</i>
+        <a href="">联系我们</a>
+        <i>|</i>
+        客服热线：400-675-1234
+    </p>
+
+    <p>Copyright © 2006 - 2014 慕课版权所有&nbsp; 京ICP备09037834号&nbsp;
+        京ICP证B1034-8373号&nbsp;
+        某市公安局XX分局备案编号：123456789123</p>
+
+    <p class="web_logo">
+        <a href=""><img src="images/webLogo.jpg" alt="weblogo"/></a>
+        <a href=""><img src="images/webLogo.jpg" alt="weblogo"/></a>
+        <a href=""><img src="images/webLogo.jpg" alt="weblogo"/></a>
+        <a href=""><img src="images/webLogo.jpg" alt="weblogo"/></a>
+    </p>
+</div>
+<!--footer结束-->
+
+</body>
+</html>

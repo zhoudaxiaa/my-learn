@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../jquery-3.0.0.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("div").click(function(){
+                $(this).stop(true,true);
+                var top=$(this).offset().top;
+                var left=$(this).offset().left;
+                var zindex=$(this).css("z-index");
+                var $c=$("div[title]");
+                $c.stop(true,true);
+                var czindex=$c.css("z-index");
+                var ctop=$c.offset().top;
+                var cleft=$c.offset().left;
+                $(this).animate({"top":ctop,"left":cleft},1000).css({"z-index":czindex}).attr("title","");
+                $($c).animate({"top":top,"left":left},1000).css({"z-index":zindex}).removeAttr("title");
+            });
+        });
+    </script>
+    <style type="text/css">
+        *{padding:0;margin:0;}
+       div,img{width: 300px; height:400px;position: absolute;border:1px solid red;}
+        .img1{top:10px;left: 50px;z-index: 1;}
+        .img2{top:80px;left: 250px;z-index:2}
+        .img3{top:160px;left: 480px;z-index:3}
+        .img4{top:80px;right: 250px;z-index:2}
+        .img5{top:10px;right: 50px;z-index:1}
+    </style>
+</head>
+<body>
+    <div class="img1"><img src="image/1.jpg"/> </div>
+    <div class="img2"><img src="image/2.jpg"/> </div>
+    <div class="img3" title=""><img src="image/3.jpg"/> </div>
+    <div class="img4"><img src="image/4.jpg"/> </div>
+    <div class="img5"><img src="image/5.jpg"/> </div>
+</body>
+</html>

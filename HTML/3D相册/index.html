@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../jquery-3.0.0.js"></script>
+    <script type="text/javascript">
+        var i=1;
+        var Deg=360/11;
+        var roX=-10;
+        var roY=0;
+        $(function(){
+            tranform();
+            $("button").click(function(){
+                 var index=$(this).index();
+//                alert(i);
+                 if(index==0){
+                     i++;
+                     tranform();
+                 }
+                else{
+                     i--;
+                     tranform();
+                 }
+            });
+
+
+            $(document).mousedown(function(ev){
+                var X_=ev.clientX;
+                var Y_=ev.clientY;
+
+            $(this).bind("mousemove",function(ev){
+                var X=ev.clientX;
+                var Y=ev.clientY;
+                var xN=X-X_;
+                var yN=Y-Y_;
+                roX+=xN*0.2;
+                roY-=yN*0.2;
+                X_=ev.clientX;
+                Y_=ev.clientY;
+                $(".wrap").css({"transform":"rotateX("+roY+"deg) rotateY("+roX+"deg)"});
+            }).mouseup(function(ev){
+                $(this).unbind("mousemove");
+            });
+            });
+        });
+
+        function tranform(){
+            $(".pic").each(function(){
+                if(i==12){
+                    i=1;
+                }
+                $(this).css({"transform":"rotateY("+Deg*i+"deg) translateZ(350px)"}).attr("ondragstart","return false");  //图片禁止拖拽
+                i++;
+//                transform: rotateY(32deg) rotateX(-10deg);;
+            });
+        }
+    </script>
+
+    <style type="text/css">
+        *{margin: 0;padding:0;}
+        body{background:black;overflow:hidden;}
+        .wrap{border:1px solid red;position: relative;margin: 100px auto;width: 140px;height:190px;transform:perspective(800px) rotateX(-10deg);transform-style: preserve-3D;}
+        .pic{width: 100%;height:100%;position:absolute;top: 0;left:0;}
+    </style>
+</head>
+<body onselectstart="return false">
+<div class="wrap">
+    <img class="pic reflect" src="image/1.jpg"/>
+    <img class="pic reflect" src="image/2.jpg"/>
+    <img class="pic reflect" src="image/3.jpg"/>
+    <img class="pic reflect" src="image/4.jpg"/>
+    <img class="pic reflect" src="image/5.jpg"/>
+    <img class="pic reflect" src="image/6.jpg"/>
+    <img class="pic reflect" src="image/7.jpg"/>
+    <img class="pic reflect" src="image/8.jpg"/>
+    <img class="pic reflect" src="image/9.jpg"/>
+    <img class="pic reflect" src="image/10.jpg"/>
+    <img class="pic reflect" src="image/11.jpg"/>
+</div>
+<div>
+    <button>上一张</button>
+    <button>下一张</button>
+</div>
+</body>
+</html>

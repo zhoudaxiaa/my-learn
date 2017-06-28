@@ -1,0 +1,38 @@
+*{
+    padding:0;
+    margin:0;
+}
+#main{
+    position:relative;
+    margin:10px auto;
+    width:720px;
+}
+#bg-canvas{
+    position:absolute;
+    display:block;
+    filter:blur(20px);
+}
+#show-canvas{
+    position:absolute;
+    display: block;
+    z-index: 10;
+    /*border: 1px solid red;*/
+}
+#btn{
+    position:absolute;
+    left:40%;
+    top:95%;
+    text-align: center;
+    line-height:30px;
+}
+#reset,#show{
+    float:left;
+    margin:0 20px;
+    width:60px;
+    height:30px;
+    background:#4DA2FD;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    cursor:pointer;
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>财务系统</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="css/main_massage.css" type="text/css"/>
+    <script src="../jquery-3.0.0.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="sidebar fl">
+        <div class="side_nav">
+            <div class="nav_top">
+                <div class="title"></div>
+                <div class="title_bg">
+                    <a class="title_nav" href="">管理首页</a>
+                    <span class="line">|</span>
+                    <a class="title_nav" id="exit" href="">退出</a>
+                </div>
+            </div>
+            <div class="nav_content">
+                <div class="nav_title">
+                    <ul class="nav_title_items">
+                        <li>
+                            <div id="nav_title_item1">
+                                <a class="nav_title_text" href="javascript:void(0)">费用管理</a>
+                            </div>
+                            <div class="nav_content_items">
+                            <ul>
+                                <li>
+                                    <a href="">所有费用</a>
+                                </li>
+                                <li>
+                                    <a href="">增加收入</a>
+                                </li>
+                                <li>
+                                    <a href="">增加支出</a>
+                                </li>
+                                <li>
+                                    <a href="">费用类型</a>
+                                </li>
+                                <li>
+                                    <a href="">添加类型</a>
+                                </li>
+                                <li>
+                                    <a href="">报销人</a>
+                                </li>
+                                <li>
+                                    <a href="">添加报销人</a>
+                                </li>
+                            </ul>
+                        </div>
+                        </li>
+
+
+                        <li>
+                            <div id="nav_title_item2">
+                                <a class="nav_title_text" href="javascript:void(0)">费用统计</a>
+                            </div>
+                            <div class="nav_content_items">
+                                <ul>
+                                    <li>
+                                        <a href="">费用统计</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+
+                        <li>
+                            <div id="nav_title_item3">
+                                <a class="nav_title_text" href="javascript:void(0)">用户管理</a>
+                            </div>
+                            <div class="nav_content_items">
+                                <ul>
+                                    <li>
+                                        <a href="">用户管理</a>
+                                    </li>
+                                    <li>
+                                        <a href="">增加用户</a>
+                                    </li>
+                                    <li>
+                                        <a href="">登录信息</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </li>
+
+                        <li>
+                            <div id="nav_title_item4">
+                                <a class="nav_title_text" href="javascript:void(0)">部门管理</a>
+                            </div>
+                            <div class="nav_content_items">
+                                <ul>
+                                    <li>
+                                        <a href="">部门管理</a>
+                                    </li>
+                                    <li>
+                                        <a href="">增加部门</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li id="nav_title_item5">
+                            <a class="nav_title_text" href="javascript:void(0)">软件信息</a>
+                        </li>
+                        <li id="nav_title_item6">
+                            版权所有：www.upol.cn
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                <!--<div id="admin_left_1" class="admin_left">-->
+                    <!--<div class="admin_left_nav_items">-->
+                        <!--<a class="admin_left_nav" id="admin_left_nav_items1" href="javascript:void(0)">费用管理</a>-->
+                    <!--</div>-->
+                    <!--<div class="pay_manage admin_left_items_bg">-->
+                        <!--<ul class="admin_left_items">-->
+                            <!--<li>-->
+                                <!--<a href="">所有费用</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="">增加收入</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="">增加支出</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="">费用类型</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="">添加类型</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="">报销人</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="">添加报销人</a>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div id="admin_left_2" class="admin_left">-->
+                    <!--<div class="admin_left_nav_items">-->
+                        <!--<a class="admin_left_nav" id="admin_left_nav_items2" href="javascript:void(0)">费用统计</a>-->
+                    <!--</div>-->
+                    <!--<div class="pay_count admin_left_items_bg">-->
+                        <!--<ul class="admin_left_items">-->
+                            <!--<li>-->
+                                <!--<a href="">费用统计</a>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div id="admin_left_3" class="admin_left">-->
+                    <!--<div class="admin_left_nav_items">-->
+                        <!--<a class="admin_left_nav" id="admin_left_nav_items3" href="javascript:void(0)">用户管理</a>-->
+                    <!--</div>-->
+                    <!--<div class="user_manage admin_left_items_bg">-->
+                        <!--<ul class="admin_left_items">-->
+                            <!--<li>-->
+                                <!--<a href="">用户管理</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="">增加用户</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="">登录信息</a>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div id="admin_left_4" class="admin_left">-->
+                    <!--<div class="admin_left_nav_items">-->
+                        <!--<a class="admin_left_nav" id="admin_left_nav_items4" href="javascript:void(0)">部门管理</a>-->
+                    <!--</div>-->
+                    <!--<div class="class_manage admin_left_items_bg">-->
+                        <!--<ul class="admin_left_items">-->
+                            <!--<li>-->
+                                <!--<a href="">部门管理</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="">增加部门</a>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div id="admin_left_5" class="admin_left">-->
+                    <!--<div class="admin_left_nav_items">-->
+                        <!--<a class="admin_left_nav" id="admin_left_nav_items5" href="javascript:void(0)">软件信息</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="copy">-->
+                    <!--版权所有：www.upol.cn-->
+                <!--</div>-->
+
+
+    <div class="content_wrapper">
+        <div class="home content_bg">
+            <div class="system_massage_title">系统信息</div>
+            <div class="system_massage">
+                <p>该系统由中国石油大学现代远程教育自主开发使用，<span class="on">财务管理系统</span> Version1.0 。</p>
+                <div class="system_massage_items">
+                    <table width="800px" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td>服务器类型：(IP:localhost)(端口:8080)</td>
+                            <td>脚本解释引擎：Jsp 2.0</td>
+                        </tr>
+                        <tr>
+                            <td>客户端类型：(IP:0:0:0:0:0:0:0:1)</td>
+                            <td>Web服务器：Weblogic6.0+sp2</td>
+                        </tr>
+                        <tr>
+                            <td>数据库服务器：Mysql 4.0.18 - nt</td>
+                            <td>JDBC驱动：Mark Matthews' MySQL Driver 2.0.14</td>
+                        </tr>
+                        <tr>
+                            <td>系统开发：中国石油大学现代远程教育</td>
+                            <td>建议分辨率：1024 * 768</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">Copyright (c) www.upol.cn All Rights Reserved .</div>
+    </div>
+</div>
+
+</body>
+</html>

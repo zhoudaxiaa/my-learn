@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        var numb1;
+        var aProvince=["安徽","北京","重庆"];
+        var aCity=[["安庆", "蚌埠","亳州"],["东城","西城"],["万州","涪陵","渝中"]];
+        $(function(){
+            for(var i=0;i<aProvince.length;i++){
+                $(".selProvince").append("<option>"+aProvince[i]+"</option>");
+            }
+            $(".selProvince").change(function() {
+                $(".selCity").children().not(":eq(0)").remove();
+                numb1 = $(this).children("option:selected").index();
+                //alert(numb1);
+                var aaCity=aCity[numb1-1];
+                for(var j=0;j<aaCity.length;j++){
+                    $(".selCity").append("<option>"+aaCity[j]+"</option>");
+                }
+            });
+        });
+    </script>
+
+</head>
+<body>
+<div><select class="selProvince">
+    <option>---请选择---</option>
+</select>
+<select class="selCity">
+    <option>---请选择---</option>
+</select>
+<select class="selCountry">
+    <option>---请选择---</option>
+</select>
+</div>
+<script type="text/javascript">
+    onload=function(){
+        var bj=document.getElementById("bj");
+        var sh=document.getElementById("sh");
+        var root=document.getElementById("city");
+        root.insertBefore(sh,bj);
+        var cs=document.getElementsByTagName("li");
+        for(var i=0;i<cs.length;i++){
+            cs[i].onclick=function(){
+                if(confirm("确认删除？")){
+                    this.parentNode.removeChild(this);
+                }
+            }
+        };
+        document.getElementById("s").onclick=function() {
+            var types=document.getElementsByName("cb");
+            var typeval=null;
+            var typeNode;
+            var Node;
+            for(var i=0;i<types.length;i++){
+                if(types[i].checked){
+                    typeval=types[i].value;
+                    break;
+                }
+
+            }
+            if(typeval==null){
+                alert("请选择类型")
+            }
+            if(typeval[0]=="c"){
+                typeNode=document.getElementById("l");
+                Node=document.createElement("li");
+            }
+            else{
+                typeNode=document.getElementById("d");
+                Node=document.createElement("dd");
+            }
+            var text=document.getElementById("t").value;
+            if(text==""){
+                alert("请输入内容")
+            }
+            var content=document.createTextNode(text);
+            typeNode.appendChild(Node);
+            Node.appendChild(content);
+
+
+        };
+    }
+</script>
+<div>
+        <ul id="city">
+            <li id="l">你喜欢哪个城市?</li>
+            <li id="bj">北京</li>
+            <li id="sh">上海</li>
+            <li>东京</li>
+        </ul>
+        <dl>
+            <dt id="d">你喜欢哪款单机游戏？</dt>
+            <dd >红警</dd>
+            <dd>LOL</dd>
+            <dd>CF</dd>
+        </dl>
+        <input type="radio" value="c" name="cb"/>城市
+        <input type="radio" value="y" name="cb"/>游戏
+        <input id="t" type="text" name="name"/>
+        <input id="s" type="submit" value="提交"/>
+</div>
+</body>
+</html>

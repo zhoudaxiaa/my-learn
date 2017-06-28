@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        body{background: black;}
+    </style>
+    <script type="text/javascript">
+        var minSize=5;
+        var maxSize=50;
+        var newOn=500;
+        var flakeColor="white";
+        var height;
+        var width;
+        var flake=$("<img src='../表白/image/hb.png'/>").css({"position":"absolute","top":"-50px"});
+        $(function(){
+            height=$(window).height()-50;
+            width=$(window).width();
+            setInterval(function(){
+                var flakeSize=minSize+Math.random()*maxSize;
+                var startPosition=width*Math.random();
+                var startOpacity=Math.random()*0.3+0.7;
+                var endPosition=width*Math.random();
+                var durationFall=2000+Math.random()*4000;
+                var endOpacity=0.2;
+                flake.clone().appendTo("body").css({
+                    "left":startPosition,
+                    "opacity":startOpacity,
+                    "font-size":flakeSize,
+                    "color":flakeColor,
+                    "transform":"rotate("+Math.random()*360+"deg)"
+                }).animate({
+                        "top":height,
+                        "opacity":endOpacity,
+                        "left":endPosition,
+                    "transform":"rotate(10deg)"
+                  },durationFall,function(){$(this).remove();});
+            },newOn);
+        });
+    </script>
+</head>
+<body>
+ </body>
+</html>

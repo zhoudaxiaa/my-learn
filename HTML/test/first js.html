@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    <style type="text/css">
+        div{width:100px;height: 100px;border:1px solid red;}
+    </style>
+    <script type="text/javascript">
+        function onClick(){
+            var i=0;
+                setInterval(function(){
+                    i++;
+                    if(i>5){
+                        clearInterval(timer);
+                    }
+                    document.getElementById("t").innerText=i;
+                },1000);
+        }
+//        onload=function(){
+//            document.getElementById("btn").onclick=function(){
+//               // var sString ="HELLO WORLD";
+//               // alert(sString.substring(0,5));
+//                //alert(sString.substr(0,5));
+//                //alert(Math.floor(Math.random()*100+1));
+//                var i=0;
+//                setTimeout(function(){
+//                    i++;
+//                    document.getElementById("t").innerText=i;
+//                },1000);
+//            }
+//        }
+        $(function(){
+           $("#jq").click(function(){
+               alert("jq");
+           });
+        });
+
+    </script>
+</head>
+<body>
+<div id="t"></div>
+<input type="button" value="第一种方式" onclick="onClick()"/>
+<input type="button" value="第二种方式" id="btn">
+<input type="button" value="jquery" id="jq"/>
+</body>
+</html>

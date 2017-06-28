@@ -1,0 +1,27 @@
+
+.all_pay_bg{
+    margin: 0 20px;
+    text-align: center;
+}
+
+.nav table td {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+.search_result_wrapper{
+    margin-top:15px;
+    line-height: 25px;
+}
+.search_result{
+    background: #f1f3f5;
+}
+.search_result_bottom{
+    height: 25px;
+}
+.page_btn{
+    color:red;
+}
+.page_btn:hover{
+    text-decoration:underline;
+}

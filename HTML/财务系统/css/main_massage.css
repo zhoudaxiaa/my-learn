@@ -1,0 +1,37 @@
+
+.home {
+    margin: 0 20px;
+}
+.system_massage_title {
+    background: rgba(0, 0, 0, 0) url("../images/admin_bg_1.gif") repeat scroll 0 0;
+    color: #fff;
+    font-weight: bold;
+    height: 25px;
+    letter-spacing: 10px;
+    line-height: 25px;
+    text-align: center;
+}
+.system_massage {
+    background: #fff none repeat scroll 0 0;
+    height: 170px;
+}
+p {
+    height: 26px;
+    line-height: 30px;
+    text-indent: 1em;
+}
+.on {
+    color: red;
+}
+.system_massage_items {
+    padding: 0 40px;
+}
+table td {
+    height: 25px;
+    line-height: 25px;
+}
+.copyright {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}

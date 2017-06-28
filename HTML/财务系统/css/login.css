@@ -1,0 +1,35 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #cde7f7 none repeat scroll 0 0;
+    font-size: 12px;
+}
+.login {
+    background: #fff url("../images/login.gif") no-repeat scroll 0 0;
+    height: 60px;
+    margin: 160px auto;
+    padding-top: 180px;
+    width: 400px;
+}
+.user_login {
+    padding: 0 30px;
+}
+.login_input {
+    margin-right: 20px;
+    width: 110px;
+}
+.login_btn {
+    border: 1px solid black;
+    height: 21px;
+    margin-right: 20px;
+    width: 50px;
+}
+.btn {
+    padding: 10px 20px;
+}
+span {
+    padding-left: 45px;
+}

@@ -1,0 +1,7 @@
+.user_manage_wrapper{
+    margin:0 20px;
+    text-align: center;
+}
+.user_manage table td{
+    background: #f1f2f5;
+}

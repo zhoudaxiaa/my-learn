@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css"/>
+    <link rel="stylesheet" href="css/reset.css" type="text/css"/>
+</head>
+<body>
+<!--headerBar开始-->
+<div class="headerBar">
+    <div class="topBar">
+        <div class="comWidth">
+            <div class="leftArea">
+                <a class="collect" href="">收藏来又来</a>
+            </div>
+            <div class="rightArea">
+                欢迎来到来又来网！
+                <a href="">[登录]</a>
+                <a href="">[免费注册]</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="navBar">
+        <div class="comWidth">
+            <div class="logo fl">
+                <a class="home" href="">
+                    <img src="images/logo.jpg" alt="logo"/>
+                </a>
+            </div>
+
+            <div class="stepBox fr">
+                <img src="images/step.jpg" alt=""/>
+                <ul class="stepBox_text">
+                    <li class="s1 active">我的购物车</li>
+                    <li class="s2 active">填写核对订单</li>
+                    <li class="s3">订单提交成功</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--headerBar结束-->
+
+<div class="contentBox comWidth clearfix">
+    <div class="shopping_items">
+        <h3 class="shopping_tit">收货地址</h3>
+        <div class="shopping_item">
+            <ul>
+                <li>
+                    <span class="shopping_text"><i>*</i>选择地区：</span>
+                    <div class="address fl">
+                        <h3>海淀区五环内</h3>
+                        <span></span>
+                    </div>
+                </li>
+                <li>
+                    <span class="shopping_text"><i>*</i>详细地址：</span>
+                    <input class="full_address_text" type="text" placeholder="请输入详细的地址"/>
+                </li>
+                <li>
+                    <span class="shopping_text"><i>*</i>收货人：</span>
+                    <input class="input_text" type="text" placeholder="请输入收货人的姓名"/>
+                </li>
+                <li>
+                    <span class="shopping_text"><i>*</i>手机号：</span>
+                    <input class="input_text" type="text" placeholder="请输入收货人的手机号"/>
+                </li>
+                <li>
+                    <input class="address_confirm_btn" type="button"/>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="hr_15"></div>
+
+    <div class="shopping_items">
+        <h3 class="shopping_tit">支付方式</h3>
+        <div class="shopping_item">
+            <ul>
+                <li>
+                    <input class="pay_radio" id="pay1" checked name="pay" type="radio"/>
+                    <label for="pay1">微信支付</label>
+                </li>
+                <li>
+                    <input class="pay_radio" id="pay2" name="pay" type="radio"/>
+                    <label for="pay2">支付宝</label>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="hr_15"></div>
+
+    <div class="shopping_items clearfix">
+        <h3 class="shopping_tit">送货清单
+            <a class="return_change fr" href="">返回购物车修改</a>
+        </h3>
+        <div class="cart_head clearfix">
+            <dl  class="cart_items">
+                <dt class="shopping_name">商品名称</dt>
+                <dd class="cart_price">单价</dd>
+                <dd class="cart_return">返现</dd>
+                <dd class="cart_num">数量</dd>
+                <dd class="cart_subtotal">小计</dd>
+            </dl>
+        </div>
+
+        <div class="cart_cont cart_padding clearfix">
+            <dl  class="cart_items">
+                <dt class="shopping_name">
+                            <img class="cart_img" src="images/des_sm.jpg" alt="img"/>
+                         <div class="cart_link">
+                             <p>
+                                 <a href="">微信支付</a>
+                             </p>
+                             <p>微信支付</p>
+                         </div>
+                </dt>
+                <dd class="cart_price">5888</dd>
+                <dd class="cart_return">100</dd>
+                <dd class="cart_num">1</dd>
+                <dd class="cart_subtotal red">5888</dd>
+            </dl>
+        </div>
+
+        <div class="cart_mess cart_padding">若有问题请留言，若有问题请留言 </div>
+
+        <div class="cart_prompt cart_padding red">
+            <i></i>
+            抱歉，一下商品无法购买。
+        </div>
+
+        <div class="cart_cont_no_bor cart_padding">
+            <img class="cart_img" src="images/des_sm.jpg" alt="img"/>
+            <div class="cart_link">
+                <p>
+                    <a href="">微信支付</a>
+                </p>
+                <p>微信支付</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="hr_15"></div>
+
+    <div class="shopping_items">
+        <h3 class="shopping_tit">订单结算</h3>
+        <div class="shopping_item clearfix">
+            <p class="count_cart">总计：
+            <span class="count_price red">￥5888.00</span>
+            </p>
+            <input class="cart_confirm fr" type="button" value="提交订单"/>
+        </div>
+    </div>
+
+</div>
+
+<!--footer开始-->
+<div class="footer">
+    <p>
+        <a href="">来网简介</a>
+        <i>|</i>
+        <a href="">来网公告</a>
+        <i>|</i>
+        <a href="">朝那贤士</a>
+        <i>|</i>
+        <a href="">联系我们</a>
+        <i>|</i>
+        客服热线：400-675-1234
+    </p>
+
+    <p>Copyright © 2006 - 2014 来又来网版权所有&nbsp; 京ICP备09037834号&nbsp;
+        京ICP证B1034-8373号&nbsp;
+        某市公安局XX分局备案编号：123456789123</p>
+
+    <p class="web_logo">
+        <a href=""><img src="images/webLogo.jpg" alt="weblogo"/></a>
+        <a href=""><img src="images/webLogo.jpg" alt="weblogo"/></a>
+        <a href=""><img src="images/webLogo.jpg" alt="weblogo"/></a>
+        <a href=""><img src="images/webLogo.jpg" alt="weblogo"/></a>
+    </p>
+</div>
+<!--footer结束-->
+
+</body>
+</html>

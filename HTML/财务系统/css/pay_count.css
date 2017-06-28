@@ -1,0 +1,11 @@
+.content_wrapper{
+    text-align:center;
+
+}
+.pay_count_wrapper{
+    margin:0 20px;
+}
+.pay_count_footer{
+    height:60px;
+    line-height: 60px;
+}

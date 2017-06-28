@@ -1,0 +1,53 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    font-size:13px;
+    font-family:Î¢ÈíÑÅºÚ;
+}
+.pagewrapper{
+    margin:200px auto;
+    width:200px;
+    height:200px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    border:1px dotted black;
+}
+.page{
+    width:100%;
+    height:100%;
+    /*background:#ccc;*/
+    transform: scale(0);
+    transition:all 1s ease;
+}
+.active{
+    transform: scale(1);
+}
+.page a{
+    display:block;
+    width:20px;
+    height:20px;
+}
+.menu{
+    background:cornflowerblue;
+    width:20px;
+    height:20px;
+}
+.btn{
+    position:absolute;
+    top:285px;
+    left:50%;
+    margin-left:-15px;
+    width:30px;
+    height:30px;
+    cursor:pointer;
+    background:blue;
+    text-align:center;
+    font-size:15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    z-index: 3;
+}

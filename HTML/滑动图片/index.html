@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    <style type="text/css">
+        *{padding: 0;margin: 0;}
+        ul li{list-style-type: none;}
+        .pic{width: 858px;height: 400px;margin:0 auto;overflow:hidden;}
+        #p1{width:100%;height: 1610px;}
+    </style>
+    <script type="text/javascript">
+        $(function(){
+            startShow();
+        });
+        function startShow(){
+            var area=$(".pic")[0];
+            var con1=$("#p1")[0];
+            var timer;
+            area.scrollTop=10;
+            startMove();
+            function scrollUp() {
+                area.scrollTop++;
+                if (area.scrollTop % 401 == 0) {
+//                    alert(1);
+                    clearInterval(timer);
+                    setTimeout(startMove, 3000);
+                }
+                else if(area.scrollTop >= con1.scrollHeight){
+//                    alert(2);
+                    area.scrollTop = 0;
+                }
+            }
+//
+//                else{
+//                    startMove();
+//                }
+//            }
+
+
+            function startMove(){
+                timer = setInterval(scrollUp,5);
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="pic">
+    <ul id="p1">
+        <li><img src="http://p3.qhimg.com/t013e79e7a1b2aa404d.jpg"/></li>
+        <li><img src="http://p4.qhimg.com/t01dae94f5fe4f294e3.jpg"/></li>
+        <li><img src="http://p7.qhimg.com/t01fb0ba6da5eb57832.jpg"/></li>
+        <li><img src="http://p6.qhimg.com/t0133167c3a95d2556d.jpg"/></li>
+    </ul>
+    <ul id="p2">
+        <li><img src="http://p3.qhimg.com/t013e79e7a1b2aa404d.jpg"/></li>
+    </ul>
+</div>
+</body>
+</html>

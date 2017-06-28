@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+
+        window.onload = function () {
+//            alert(1);
+            var canvas1 = document.getElementById("canvas1");
+            canvas1.width = 300;
+            canvas1.height = 450;
+            var context1 = canvas1.getContext("2d");
+
+            var canvas2 = document.getElementById("canvas2");
+            canvas2.width = 300;
+            canvas2.height = 450;
+            var context2 = canvas2.getContext("2d");
+
+            var image = new Image();
+
+            image.src = "image/1.jpg";
+
+//            context.moveTo(100,100);
+//            context.lineTo(300,300);
+//            context.lineTo(100,300);
+//            context.lineTo(100,100);
+//            context.strokeStyle="red";
+//            context.lineWidth=5;
+//            context.stroke();
+//            context.fillStyle="blue";
+//            context.fill();
+//            context.arc(300,300,100,0,1.5*Math.PI,true);        //圆心坐标，半径，起始角度，终点角度,画的方向，默认false为顺时针
+//            context.stroke();
+
+
+            image.onload = function () {
+                context1.drawImage(image, 0, 0, 300, 450);
+            };
+
+            function putImageData() {       //传递图像
+               var imageData = context1.getImageData(0,0,300,450);
+                context2.putImageData(imageData,0,0,0,0,300,450);
+            }
+
+            function black(){       //变黑
+                var imageData = context1.getImageData(0,0,300,450);
+                var pixData=imageData.data;
+                for(var i=0;i < pixData.length;i++){
+                    pixData[4*i]=0;
+                    pixData[4*i+1]=0;
+                    pixData[4*i+2]=0;
+                }
+                context2.putImageData(imageData,0,0,0,0,300,450);
+            }
+
+            function grey(){        //变灰
+                var imageData = context1.getImageData(0,0,300,450);
+                var pixData=imageData.data;
+                for(var i=0;i < pixData.length;i++){
+                   var r = pixData[4*i];
+                   var g = pixData[4*i+1];
+                   var b = pixData[4*i+2];
+                    var gr = r * 0.3 + g * 0.59 + b * 0.11;
+                    pixData[4*i]= gr;
+                    pixData[4*i+1] = gr;
+                    pixData[4*i+2] = gr;
+                }
+                context2.putImageData(imageData,0,0,0,0,300,450);
+            }
+
+            function vague(){        //模糊
+                var imageData = context1.getImageData(0,0,300,450);
+                var pixData=imageData.data;
+
+                var tmpImageData = context1.getImageData(0,0,300,450);
+                var tmpData=tmpImageData.data;
+                for(var i=1;i<canvas1.width-1;i++){
+                    for(var j=1;j<canvas1.height-1;j++){
+
+                        var totalR=0; var totalG=0; var totalB=0;
+                        for(var dx=-1;dx<=1;dx++){
+                            for(var dy=-1;dy<=1;dy++){
+                                var x=i+dx;
+                                var y=j+dy;
+
+                                var p=(x*canvas1.width+y)*4;
+                                totalR+= tmpData[p];
+                                totalG+= tmpData[p+1];
+                                totalB+= tmpData[p+2];
+
+//                                var r=(pixData[(y*canvas1.width+x)*4]+pixData[(y*canvas1.width+x)*4])/9;
+//                                var g=(pixData[(y*canvas1.width+x)*4+1]+pixData[(y*canvas1.width+x)*4+1])/9;
+//                                var b=(pixData[(y*canvas1.width+x)*4+2]+pixData[(y*canvas1.width+x)*4+2])/9;
+                            }
+                        }
+                             var p=(i*canvas1.width+j)*4;
+                                pixData[p]=totalR/9;
+                                pixData[p+1]=totalG/9;
+                                pixData[p+2]=totalB/9;
+                    }
+                }
+                context2.putImageData(imageData,0,0,0,0,300,450);
+            }
+
+            document.getElementsByTagName("a")[0].onclick=putImageData;
+            document.getElementsByTagName("a")[1].onclick=black;
+            document.getElementsByTagName("a")[2].onclick=grey;
+            document.getElementsByTagName("a")[3].onclick=vague;
+        };
+
+
+    </script>
+</head>
+<body>
+<canvas id="canvas1">
+    请升级浏览器，否则将无法体验此功能
+</canvas>
+<canvas id="canvas2">
+    请升级浏览器，否则将无法体验此功能
+</canvas>
+<a href="#">putimage</a>
+<a href="#">全黑</a>
+<a href="#">灰度</a>
+<a href="#">模糊</a>
+</body>
+</html>

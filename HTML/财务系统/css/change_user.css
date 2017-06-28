@@ -1,0 +1,10 @@
+.change_user_wrapper{
+    margin:0 300px;
+}
+.change_user table td{
+    background:#f1f2f5;
+}
+.table_left{
+    width:30%;
+    text-align: center;
+}

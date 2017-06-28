@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#t").css("transform","rotateZ(90deg)");
+        });
+    </script>
+    <style>
+        .wrap{}
+        .wrap .box{border:2px solid red;width:200px;height:200px;float:left;margin-right: 10px;margin-bottom: 10px;}
+        .wrap .box:hover h1{display:block;}
+        .wrap .box h1{background:#333;color:white;display:none;}
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="box">
+        <h1>芯晴网页特效</h1>
+    </div>
+    <div class="box">
+        <h1>CsrCode.CN</h1>
+    </div>
+    <div class="box">
+        <h1>欢迎您的光临</h1>
+    </div>
+</div>
+<div id="t"><</div>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+
+.add_pay_type_wrapper{
+    margin:0 275px;
+}
+.add_pay_type_top{
+    text-align: center;
+}
+.add_pay_type{
+    padding:0 0 10px 10px;
+}
+.add_pay_type_btn{
+    text-align: center;
+}
+.confirm{
+    margin-right:30px;
+}

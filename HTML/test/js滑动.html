@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../jquery-3.0.0.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("img").hover(function(){
+                $(this).css({"box-shadow":"0 10px 5px rgb(150,150,150)"});
+            },function(){
+                $(this).css("box-shadow","0 0 0");
+            });
+
+            var i=0;
+            $("button").click(function(){
+                clearInterval(timer);
+                if(i==0) {
+                    var timer = setInterval(function () {
+                        var t = $("img").offset().top;
+                        if (t >= 0) {
+                            clearInterval(timer);
+                        }
+                        else {
+                            var speed = Math.ceil((0-$("img")[0].offsetTop)/20);
+                        }
+//                    $("img").offset({"top":($("img").offset().top+speed)});      //jq写法
+                        $("img")[0].style.top =t + speed + "px";     //对象转换js对象，js写法
+                    }, 10);
+                    i++;
+                }
+                else{
+
+                    var timer = setInterval(function () {
+                        var t = $("img").offset().top;
+//                        alert(t);
+                        if (t <= -400) {
+                            clearInterval(timer);
+                        }
+                        else {
+                            var speed = Math.floor(-(400+$("img")[0].offsetTop)/20);
+                        }
+//                    $("img").offset({"top":($("img").offset().top+speed)});      //jq写法
+                        $("img")[0].style.top = t + speed + "px";     //对象转换js对象，js写法
+                    }, 10);
+                    i=0;
+                }
+            });
+
+        });
+    </script>
+    <style type="text/css">
+        *{padding:0;margin:0;}
+        div{position:relative;margin:0 auto;width: 300px;height:400px;}
+        img{position:absolute;top:-400px;width: 100%;height: 100%;}
+    </style>
+</head>
+<body>
+<div>
+    <img src="../抽奖/image/1.jpg"/>
+</div>
+<div>
+    <button>点击我试试</button>
+</div>
+</body>
+</html>

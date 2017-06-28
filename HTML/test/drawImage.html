@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        window.onload=function(){
+            var mag = document.getElementById("magnifier");
+            var img = document.getElementById("img");   //展示画布
+            var canvas = document.getElementById("canvas");   //放大画布
+            var show = document.getElementById("show");
+
+            canvas.width=300;
+            canvas.height=450;
+
+            var context = canvas.getContext("2d");
+
+            var image=new Image();
+            image.src="image/1.jpg";
+            image.onload=function(){    //加载图片完成后执行事件
+                magnifier();
+            };
+
+            function magnifier() {      //放大镜选择区域函数
+                show.onmousemove = function (ev) {      //鼠标移入照片触发事件
+                    if (ev.clientX < 300 && ev.clientY < 450) {
+                        mag.style.display="block";
+
+                        moveArea(ev.clientX,ev.clientY);    //限制放大镜移动区域
+
+                        showArea(ev.clientX,ev.clientY);    //限制放大镜显示区域
+
+                        context.drawImage(img,mag.offsetLeft,mag.offsetTop,200,200,0,0,canvas.width,canvas.height);  //放大选中区域
+
+                        //测试用的
+//                        context.save();     //储存画布当前状态
+//                        context.arc(100,100,100,0,2*Math.PI);
+//                        context.clip();     //在截取的画布大小里进行操作，不影响该区域外内容
+//                        context.drawImage(img,0,0,200,200);
+//                        context.restore();      //还原画布之前的状态
+                    }
+                };
+            }
+
+            function moveArea(x,y){    //放大镜移动区域
+                if(y <= 100){       //判断y坐标是否越界
+                    mag.style.top = 0;
+                }
+                else if(y >= 350){
+                    mag.style.top = 250 + "px";
+                }else{
+                    mag.style.top = y - 100 + "px";
+                }
+
+                if(x <= 100){       //判断x坐标是否越界
+                    mag.style.left = 0;
+                }
+                else if(x >= 200){
+                    mag.style.left = 100 + "px";
+                }else{
+                    mag.style.left = x - 100 + "px";
+                }
+
+            }
+
+            function showArea(x,y){     //放大镜显示区域
+                if(y <= 16 || y >= 440){
+                    mag.style.display="none";
+                }
+                if(x <= 16 || x >= 290){
+                    mag.style.display="none";
+                }
+            }
+
+        }
+
+    </script>
+    <style type="text/css">
+        #magnifier{
+            position:absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            cursor:move;
+            width:200px;
+            height:200px;
+            border:1px solid black;
+            z-index: 10;
+        }
+
+        #image{
+            position: relative;
+            overflow: hidden;
+            float: left;
+            width: 302px;
+            height: 452px;
+        }
+
+        #img{
+            cursor:move;
+            border:1px solid black;
+
+
+        }
+        #canvas{
+            display: block;
+            float: left;
+            border:1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+<div id="show">
+    <div  id="image">
+        <img src="image/1.jpg" id="img"/>
+        <div id="magnifier"></div>
+    </div>
+    <canvas id="canvas"></canvas>
+</div>
+
+</body>
+</html>

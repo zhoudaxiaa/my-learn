@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        onload=function() {
+            var n=document.getElementById("l");
+            var o=document.getElementById("cl");
+            var f=document.getElementById("f");
+            var c=document.getElementById("c");
+            var nc=n.cloneNode(true);
+            alert(1);
+            c.replaceChild(nc,o);
+            alert(2);
+            f.replaceChild(o,n);
+        }
+    </script>
+</head>
+<body>
+<ul id="f">
+    <li id="l">1</li>
+    <li>2</li>
+</ul>
+<ul id="c">
+    <li id="cl">3</li>
+    <li>4</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../jquery-3.0.0.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            var wid=$(window).width();
+            var hei=$(window).height();
+            var time=10;
+            var minsize=1;
+            var maxsize=9;
+            var color="white";
+            var $snow=$("<div></div>").css({"position":"absolute"}).html("❆");
+            $("img").css({"width":wid,"height":hei});
+            setInterval(function(){
+                var startPosition=Math.random()*wid;
+                var size=Math.random()*maxsize+minsize;
+                $snow.clone().appendTo("body").css({"left":startPosition,"top":-5,"color":color,"font-size":size}).animate({"left":startPosition,"top":hei},4000,function(){
+                    $(this).remove();
+                });
+            },time);
+        });
+    </script>
+    <style type="text/css">
+        *{padding:0;margin:0;}
+        audio{position: fixed;}
+    </style>
+</head>
+<body>
+<div class="bg">
+    <img src="image/3.jpg"/>
+</div>
+<audio controls="controls" src="music/1.mp3" autoplay="autoplay"></audio>
+</body>
+</html>

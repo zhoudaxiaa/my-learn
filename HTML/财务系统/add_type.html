@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>财务系统</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="css/add_pay_type.css" type="text/css"/>
+    <script src="../jquery-3.0.0.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="wrapper">
+    <!--公共部分开始-->
+    <div class="sidebar fl">
+        <div class="side_nav">
+            <div class="nav_top">
+                <div class="title"></div>
+                <div class="title_bg">
+                    <a class="title_nav" href="">管理首页</a>
+                    <span class="line">|</span>
+                    <a class="title_nav" id="exit" href="">退出</a>
+                </div>
+            </div>
+            <div class="nav_content">
+                <div class="nav_title">
+                    <ul class="nav_title_items">
+                        <li>
+                            <div id="nav_title_item1">
+                                <a class="nav_title_text" href="javascript:void(0)">费用管理</a>
+                            </div>
+                            <div class="nav_content_items">
+                                <ul>
+                                    <li>
+                                        <a href="">所有费用</a>
+                                    </li>
+                                    <li>
+                                        <a href="">增加收入</a>
+                                    </li>
+                                    <li>
+                                        <a href="">增加支出</a>
+                                    </li>
+                                    <li>
+                                        <a href="">费用类型</a>
+                                    </li>
+                                    <li>
+                                        <a href="">添加类型</a>
+                                    </li>
+                                    <li>
+                                        <a href="">报销人</a>
+                                    </li>
+                                    <li>
+                                        <a href="">添加报销人</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+
+                        <li>
+                            <div id="nav_title_item2">
+                                <a class="nav_title_text" href="javascript:void(0)">费用统计</a>
+                            </div>
+                            <div class="nav_content_items">
+                                <ul>
+                                    <li>
+                                        <a href="">费用统计</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+
+                        <li>
+                            <div id="nav_title_item3">
+                                <a class="nav_title_text" href="javascript:void(0)">用户管理</a>
+                            </div>
+                            <div class="nav_content_items">
+                                <ul>
+                                    <li>
+                                        <a href="">用户管理</a>
+                                    </li>
+                                    <li>
+                                        <a href="">增加用户</a>
+                                    </li>
+                                    <li>
+                                        <a href="">登录信息</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </li>
+
+                        <li>
+                            <div id="nav_title_item4">
+                                <a class="nav_title_text" href="javascript:void(0)">部门管理</a>
+                            </div>
+                            <div class="nav_content_items">
+                                <ul>
+                                    <li>
+                                        <a href="">部门管理</a>
+                                    </li>
+                                    <li>
+                                        <a href="">增加部门</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li id="nav_title_item5">
+                            <a class="nav_title_text" href="javascript:void(0)">软件信息</a>
+                        </li>
+                        <li id="nav_title_item6">
+                            版权所有：www.upol.cn
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--公共部分结束-->
+
+    <div class="content_wrapper">
+        <div class="add_pay_type_wrapper content_bg">
+            <div class="add_pay_type_top content_top_title">添加费用类型</div>
+            <div class="add_pay_type">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td width="30%" height="30px">类型名称</td>
+                        <td width="70%">
+                            <input type="text"/>**不得超过 10 个汉字
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>所属类型</td>
+                        <td>
+                            <select name="sslx" id="sslx">
+                                <option value="zc">支出</option>
+                                <option value="zc">收入</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr class="add_pay_type_btn">
+                        <td colspan="2">
+                            <input class="confirm" type="submit" value="确定"/>
+                            <input type="reset" value="清除"/>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+</div>
+</body>
+</html>

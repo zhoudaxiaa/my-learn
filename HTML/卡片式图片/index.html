@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    <style type="text/css">
+        *{padding: 0;margin: 0;}
+        img{width: 300px;height: 400px;}
+        #p1{position:absolute;top: 50px;left:50px; z-index: 1;box-shadow: 0px 2px 20px pink;cursor:pointer;}
+        #p2{position:absolute;top: 85px;left:250px;z-index: 2;box-shadow: 0px 2px 20px pink;cursor:pointer;}
+        #p3{position:absolute;top: 120px;left:492px;z-index: 3;box-shadow: 0px 2px 20px pink;cursor:pointer;}
+        #p4{position:absolute;top: 85px;right:250px;z-index: 2;box-shadow: 0px 2px 20px pink;cursor:pointer;}
+        #p5{position:absolute;top: 50px;right:50px;z-index: 1;box-shadow: 0px 2px 20px pink;cursor:pointer;}
+    </style>
+    <script type="text/javascript">
+        $(function(){
+                var top;
+                var htop;
+                var left;
+                var ctop;
+                var cleft;
+                var zindex1;
+                var zindex2;
+                $("img").click(function(){
+                    $("img[title]").stop(true,true);
+                    $(this).stop(true,true);
+                    zindex1=$(this).css("z-index");
+                    zindex2=$("img[title]").css("z-index");
+                    top=$(this).offset().top;
+                    left=$(this).offset().left;
+                    ctop=$("img[title]").offset().top;
+                    cleft=$("img[title]").offset().left;
+                    $("img[title]").animate({"top":top,"left":left},1000).css("z-index",zindex1).removeAttr("title");
+                    $(this).animate({"top":ctop,"left":cleft},1000).css("z-index",zindex2).attr("title","");
+                });
+//                $("img").hover(function () {
+//                    htop=$(this).offset().top-2;
+//                    $(this).css({"top":htop});
+//                },function(){
+//                    htop+=2;
+//                    $(this).css({"top":htop});
+//                })
+
+        });
+    </script>
+</head>
+<body>
+<div>
+    <img id="p1" src="image/1.jpg"/>
+    <img id="p2" src="image/2.jpg"/>
+    <img id="p3" title="" src="image/3.jpg"/>
+    <img id="p4" src="image/4.jpg"/>
+    <img id="p5" src="image/5.jpg"/>
+</div>
+</body>
+</html>

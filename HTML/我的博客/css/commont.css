@@ -1,0 +1,36 @@
+
+body, dl, ol, ul, dd, form, h1, h2, h3, h4, h5, h6, a, i, img, label, p, span, strong {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font: 14px "微软雅黑";
+    background: #efefef;
+}
+i, em {
+    font-style: normal;
+}
+a {
+    text-decoration: none;
+    color:#545151;
+}
+ul,ol {
+    list-style: outside none none;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.clearfix {
+    clear: both;
+}
+.clearfix::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+.red {
+    color: red;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../jquery-3.0.0.js" type="text/javascript"></script>
+    <script src="js/test.js" type="text/javascript"></script>
+    <style type="text/css">
+        *{
+            padding:0;
+            margin:0;
+        }
+        canvas{
+            position:relative;
+            display: block;
+            margin:50px auto;
+            /*border:3px solid red;*/
+        }
+        #color{
+            position:absolute;
+            left:50%;
+            margin-left:-200px;
+
+        }
+        p{
+            float: left;
+            width: auto;
+            height: auto;
+        }
+        #red,#black,
+        #blue,#yellow{
+            float: left;
+            width:50px;
+            height:20px;
+            cursor:pointer;
+            margin:0 5px;
+        }
+        #red{
+            background:red;
+        }
+        #yellow{
+            background:yellow;
+        }
+        #blue{
+            background:blue;
+        }
+        #black{
+            background:black;
+        }
+        button{
+            margin-left:100px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div id="color">
+        <p>请选择画笔颜色</p>
+        <div class="color" id="red"></div>
+        <div class="color" id="blue"></div>
+        <div class="color" id="black"></div>
+        <div class="color" id="yellow"></div>
+        <button>重写</button>
+    </div>
+
+</body>
+</html>

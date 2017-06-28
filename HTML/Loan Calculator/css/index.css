@@ -1,0 +1,12 @@
+.output{
+    font-weight:bold;  //计算结果字体粗体
+}
+#payment{
+    text-decoration:underline;
+}
+#graph{
+    border:solid black 1px;  //图表有一个1像素的边框
+}
+th,td{
+    vertical-align:top;  //表格单元对其方式为顶对齐
+}

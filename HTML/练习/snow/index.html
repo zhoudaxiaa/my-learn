@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../jquery-3.0.0.js" ></script>
+    <script type="text/javascript">
+        var width=$(window).width();
+        var height=$(window).height();
+        var snow=$("<div></div>").css({"position":"absolute"}).html("❆");
+        var time=100;
+        var minSize=5;
+        var maxSize=10;
+        var color="white";
+        $(function(){
+
+            Timer();
+        });
+        function Timer(){
+            setInterval(function(){
+                var left=Math.random()*width;
+                var top=height;
+                var stopLeft=Math.random()*width;
+                var size=maxSize*Math.random()+minSize;
+                snow.clone().appendTo("body").css({"left":left,"top":"-5px","color":color,"font-size":size}).animate({"left":stopLeft,"top":top},4000,function(){
+                   $(this).remove();
+                });
+            },time);
+        }
+    </script>
+    <style type="text/css">
+        *{padding:0;margin:0;}
+        body{background: black;}
+    </style>
+</head>
+<body>
+
+</body>
+</html>

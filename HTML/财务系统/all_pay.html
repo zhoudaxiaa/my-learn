@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>财务系统</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="css/all_pay.css" type="text/css"/>
+    <script src="../jquery-3.0.0.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="wrapper">
+
+    <!--公共部分开始-->
+    <div class="sidebar fl">
+        <div class="side_nav">
+            <div class="nav_top">
+                <div class="title"></div>
+                <div class="title_bg">
+                    <a class="title_nav" href="">管理首页</a>
+                    <span class="line">|</span>
+                    <a class="title_nav" id="exit" href="">退出</a>
+                </div>
+            </div>
+            <div class="nav_content">
+                <div class="nav_title">
+                    <ul class="nav_title_items">
+                        <li>
+                            <div id="nav_title_item1">
+                                <a class="nav_title_text" href="javascript:void(0)">费用管理</a>
+                            </div>
+                            <div class="nav_content_items">
+                                <ul>
+                                    <li>
+                                        <a href="">所有费用</a>
+                                    </li>
+                                    <li>
+                                        <a href="">增加收入</a>
+                                    </li>
+                                    <li>
+                                        <a href="">增加支出</a>
+                                    </li>
+                                    <li>
+                                        <a href="">费用类型</a>
+                                    </li>
+                                    <li>
+                                        <a href="">添加类型</a>
+                                    </li>
+                                    <li>
+                                        <a href="">报销人</a>
+                                    </li>
+                                    <li>
+                                        <a href="">添加报销人</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+
+                        <li>
+                            <div id="nav_title_item2">
+                                <a class="nav_title_text" href="javascript:void(0)">费用统计</a>
+                            </div>
+                            <div class="nav_content_items">
+                                <ul>
+                                    <li>
+                                        <a href="">费用统计</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+
+                        <li>
+                            <div id="nav_title_item3">
+                                <a class="nav_title_text" href="javascript:void(0)">用户管理</a>
+                            </div>
+                            <div class="nav_content_items">
+                                <ul>
+                                    <li>
+                                        <a href="">用户管理</a>
+                                    </li>
+                                    <li>
+                                        <a href="">增加用户</a>
+                                    </li>
+                                    <li>
+                                        <a href="">登录信息</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </li>
+
+                        <li>
+                            <div id="nav_title_item4">
+                                <a class="nav_title_text" href="javascript:void(0)">部门管理</a>
+                            </div>
+                            <div class="nav_content_items">
+                                <ul>
+                                    <li>
+                                        <a href="">部门管理</a>
+                                    </li>
+                                    <li>
+                                        <a href="">增加部门</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li id="nav_title_item5">
+                            <a class="nav_title_text" href="javascript:void(0)">软件信息</a>
+                        </li>
+                        <li id="nav_title_item6">
+                            版权所有：www.upol.cn
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--公共部分结束-->
+
+
+    <div class="content_wrapper">
+
+        <div class="nav all_pay_bg content_bg">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td height="25px" width="14%">部门</td>
+                        <td width="11%">报销人</td>
+                        <td width="11%">所属类型</td>
+                        <td width="11%">费用类型</td>
+                        <td width="24%">日期</td>
+                        <td width="16%">项目名称</td>
+                        <td width="13%"></td>
+                    </tr>
+                    <tr height="30px">
+                        <td>
+                            <select name="bm" id="bm">
+                                <option value="">全部</option>
+                                <option value="">张三</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="bxr" id="bxr">
+                                <option value="">全部</option>
+                                <option value="">收入</option>
+                                <option value="">支出</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="sslx" id="sslx">
+                                <option value="">全部</option>
+                                <option value="">收入</option>
+                                <option value="">支出</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="fylx" id="fylx">
+                                <option value="">全部</option>
+                                <option value="">收入</option>
+                                <option value="">支出</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="text"/>
+                            <input type="button" value="请选择日期"/>
+                        </td>
+                        <td>
+                            <input type="text"/>
+                        </td>
+                        <td>
+                            <input type="submit" value="提交"/>
+                            <input type="reset" value="重置"/>
+                        </td>
+                    </tr>
+                </table>
+        </div>
+
+        <div class="search_result_wrapper all_pay_bg">
+            <div class="search_result_top content_top_title">
+                费用清单搜索结果
+            </div>
+            <div class="search_result">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr height="25px">
+                        <td width="4%">ID</td>
+                        <td width="15%">部门</td>
+                        <td width="6%">报销人</td>
+                        <td width="8%">所属类型</td>
+                        <td width="9%">费用类型</td>
+                        <td width="7%">金额(元)</td>
+                        <td width="16%">项目名称</td>
+                        <td width="17%">说明</td>
+                        <td width="9%">日期</td>
+                        <td width="9%">操作</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="search_result_bottom">
+                记录总条数：0 当前页1/1总页数
+                <a class="page_btn" href="">首页</a>
+                <a class="page_btn" href="">上一页</a>
+                <a class="page_btn" href="">下一页</a>
+                <a class="page_btn" href="">末页</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

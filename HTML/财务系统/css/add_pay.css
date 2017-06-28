@@ -1,0 +1,35 @@
+.content_wrapper {
+    margin-left: 180px;
+}
+.add_pay_wrapper{
+    margin: 0 40px;
+}
+.add_pay_title{
+    text-align: center;
+}
+.tdr{
+    width: 250px;
+    text-align: right;
+}
+.add_pay table tr{
+    background: #f1f2f5;
+}
+.add_pay table td{
+    height:30px;
+}
+.je{
+    width:60px;
+}
+.xmmc{
+    width:350px;
+}
+.sm{
+    width: 350px;
+    height:120px;
+}
+.red{
+    color:red;
+}
+.blue{
+    color:blue;
+}

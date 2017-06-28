@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../jquery-3.0.0.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var i=0;
+        $(function () {
+
+            var time;
+            Timer();
+            Show();
+            Btn();
+        });
+        function Timer(){
+           time= setInterval(function(){
+                if(i==5){
+                    i=0;
+                }
+               $(".img").eq(i).fadeIn(1000).siblings().fadeOut(1000);
+               $(".tap ul li").eq(i).css({"background":"red"}).siblings().css({"background":"black"});
+                i++;
+            },4000);
+        }
+        function Show() {
+            $(".tap ul li").click(function () {
+//                alert($(this).length);
+                clearInterval(time);
+                i = $(this).index();
+                $(".img").eq(i).fadeIn(1000).siblings().fadeOut(1000);
+                $(".tap ul li").eq(i).css({"background": "red"}).siblings().css({"background": "black"});
+//                alert(i);
+                Timer();
+            });
+        }
+
+         function Btn(){
+             $(".bt1").click(function(){
+//                 alert(1);
+                 clearInterval(time);
+                 if(i==0){
+                     i=5;
+                 }
+                 i--;
+                 $(".img").eq(i).fadeIn(1000).siblings().fadeOut(1000);
+                 $(".tap ul li").eq(i).css({"background":"red"}).siblings().css({"background":"black"});
+                 Timer();
+             });
+             $(".bt2").click(function(){
+                 clearInterval(time);
+                 i++;
+                 if(i==5){
+                     i=0;
+                 }
+//                    alert(i);
+                 $(".img").eq(i).fadeIn(1000).siblings().fadeOut(1000);
+                 $(".tap ul li").eq(i).css({"background":"red"}).siblings().css({"background":"black"});
+                 Timer();
+             });
+         }
+
+
+    </script>
+
+    <style type="text/css">
+        *{padding: 0;margin:0;}
+        .hd{width: 730px;height: 454px;margin: 0 auto;border: 1px solid red;}
+        .img{position: absolute;}
+        .tap{position: absolute;top:420px;left:590px;}
+        .tap ul li{cursor:pointer;color:white;list-style-type: none;display: inline-block;width: 18px;height: 18px;border-radius:100%;background: black;line-height:18px;text-align: center;}
+    </style>
+</head>
+<body>
+<div class="hd">
+    <div class="img"><img src="http://img11.360buyimg.com/da/jfs/t2761/138/3170520517/131019/5f72d99f/57832fa7N8a577b8a.jpg"/></div>
+    <div class="img"><img src="http://img20.360buyimg.com/da/jfs/t2650/65/3177770327/114997/766b6a46/578462a3N1fced3b9.jpg"/></div>
+    <div class="img"><img src="http://img30.360buyimg.com/da/jfs/t2917/267/1572927382/89006/9366afc5/57873e0fN336b3396.jpg"/></div>
+    <div class="img"><img src="http://img20.360buyimg.com/da/jfs/t2581/287/3286659763/74903/1155f994/57872929Nec693d98.jpg"/></div>
+    <div class="img"><img src="http://img14.360buyimg.com/da/jfs/t2686/48/3167649933/149104/7ab5ed80/5783553bNad0931f9.jpg"/></div>
+</div>
+<div class="tap">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+<button class="bt1">前进</button>
+<button class="bt2">后退</button>
+</body>
+</html>
