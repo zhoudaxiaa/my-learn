@@ -93,4 +93,151 @@ body{
 }
 .page3{
 	background-color:#e8b118;
+	padding:20px;
+}
+.myworks{
+	position:relative;
+	top:0;
+	left:0;
+	margin:20px auto 0;
+	height:100%;
+	max-width:600px;
+}
+.time-line{
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:103px;
+	border-right:4px solid #f59d43;
+	z-index:-1;
+}
+.work-content{
+}
+.work-items{
+	position:relative;
+	top:0;
+	left:0;
+	min-height:50px;
+	padding-right:10px;
+}
+.work-year,.work-mouth{
+	position:absolute;
+	top:0;
+	left:0;
+	width:110px;
+	text-align:right;
+}
+.year-icon,.mouth-icon{
+	position:relative;
+	display:inline-block;
+	width:20px;
+	height:20px;
+	background-color:#e8b118;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.work-year{
+	font-size:1.2rem;
+}
+.year-icon{
+	top:5px;
+	background-image:url("../images/year-icon.png");
+}
+.work-mouth{
+    font-size:1rem;
+}
+.mouth-icon{
+	top:5px;
+    background-image:url("../images/mouth-icon.png");
+}
+.work{
+	position:relative;
+	top:0;
+	left:0;
+	background-color:#ed9235;
+	margin-top:5px;
+	margin-left:115px;
+	padding:5px;
+	border-radius:5px;
+	text-align:left;
+}
+.page4{
+	background-color:#fb6d7e;
+}
+.myproduces{
+	margin-top:20px;
+}
+.produce-items{
+	position:relative;
+	float:left;
+	width:41.6%;
+	min-width:230px;
+	min-height:72px;
+	margin:5px;
+	padding:10px 10px 10px 65px;
+	text-align:left;
+	border:1px solid #fff;
+}
+.produce-icon{
+	position:absolute;
+	top:8px;
+	left:13px;
+	display:inline-block;
+	width:42px;
+	height:42px;
+	background-repeat:no-repeat;
+	background-position:center center;
+}
+.produces1{
+	background-image:url("../images/web.png");
+}
+.produce-items h3{
+	font-size:1.2rem;
+}
+.produce-items p{
+	margin:5px 0 8px;
+}
+.produce-items a{
+	display:inline-block;
+	color:#1192fb;
+	font-size:.8rem;
+	text-decoration:underline;
+}
+.bg4{
+	position:absolute;
+	bottom:0;
+	height:50px;
+	width:100%;
+	background-size:100% 100%;
+	background-image:url("../images/bg4.png");
+	background-repeat:repeat-x;
+}
+.page5{
+	background-color:#149b70;
+}
+.mywish{
+	margin:60px auto 0;
+	max-width:800px;
+}
+.mywish li{
+	height:40px;
+	font-size:1.05rem;
+	text-align:left;
+}
+.page6{
+	background-color:#19B1E0;
+}
+.mycontact{
+	margin-top:80px;
+}
+.mycontact p{
+	color:#0f7c9d;
+	font-size:1.2rem;
+}
+.social{
+	margin:30px auto;
+}
+.social li{
+    float:left;
 }
